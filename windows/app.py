@@ -2,7 +2,7 @@ from PySide6.QtWidgets import QWidget, QMainWindow, QPushButton, QTextEdit, QVBo
 
 from languages import Language, English, Russian
 
-from .anotherwindow import AnotherWindow
+from .another_window import AnotherWindow
 
 
 class App(QMainWindow):

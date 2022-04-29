@@ -1,9 +1,7 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 
 
 class Language(ABC):
-    _WINDOW_NAME: str
-    _SET_ENGLISH: str
     _SET_RUSSIAN: str
     _OPEN_ANOTHER_WINDOW: str
     _PLACEHOLDER_TEXT: str
@@ -11,12 +9,14 @@ class Language(ABC):
     _ANOTHER_WINDOW_CLOSE: str
 
     @property
+    @abstractmethod
     def window_name(self) -> str:
-        return self._WINDOW_NAME
+        ...
 
     @property
+    @abstractmethod
     def set_english(self) -> str:
-        return self._SET_ENGLISH
+        ...
 
     @property
     def set_russian(self) -> str:

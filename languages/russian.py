@@ -1,11 +1,33 @@
+from strings import WindowNameRu, SetEnglishRu, SetRussianRu, OpenAnotherWindowRu, PlaceholderTextRu, \
+    AnotherWindowNameRu, AnotherWindowCloseRu
 from .language import Language
 
 
 class Russian(Language):
-    _WINDOW_NAME = 'Пример Фабричного Метода'
-    _SET_ENGLISH = 'Сменить на английский'
-    _SET_RUSSIAN = 'Сменить на русский'
-    _OPEN_ANOTHER_WINDOW = 'Открыть ещё одно окно'
-    _PLACEHOLDER_TEXT = 'Введите текст здесь...'
-    _ANOTHER_WINDOW_NAME = 'Просто Ещё Одно Окно'
-    _ANOTHER_WINDOW_CLOSE = 'Закрыть'
+    @property
+    def window_name(self) -> str:
+        return str(WindowNameRu())
+
+    @property
+    def set_english(self) -> str:
+        return str(SetEnglishRu())
+
+    @property
+    def set_russian(self) -> str:
+        return str(SetRussianRu())
+
+    @property
+    def open_another_window(self) -> str:
+        return str(OpenAnotherWindowRu())
+
+    @property
+    def placeholder_text(self) -> str:
+        return str(PlaceholderTextRu())
+
+    @property
+    def another_window_name(self) -> str:
+        return str(AnotherWindowNameRu())
+
+    @property
+    def another_window_close(self) -> str:
+        return str(AnotherWindowCloseRu())
